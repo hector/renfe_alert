@@ -3,6 +3,7 @@
 require 'capybara'
 require 'capybara/dsl'
 require 'date'
+require 'open-uri'
 
 # Use PhantomJS
 require 'capybara/poltergeist'
@@ -65,7 +66,7 @@ class Scraper
 
     # Notify via IFTTT Maker Channel
     message = "New trains for #{day} from #{origin} to #{destination}"
-    visit "https://maker.ifttt.com/trigger/notification/with/key/#{@key}?value1=#{message}"
+    visit "https://maker.ifttt.com/trigger/notification/with/key/#{@key}?value1=#{URI.encode(message)}"
 
     return true
 
