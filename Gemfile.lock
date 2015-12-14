@@ -27,6 +27,8 @@ GEM
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rubyzip (1.1.7)
     selenium-webdriver (2.48.1)
       childprocess (~> 0.5)
@@ -48,6 +50,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   poltergeist
+  rest-client
   selenium-webdriver
   whenever
 
