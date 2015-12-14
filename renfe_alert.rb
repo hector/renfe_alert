@@ -66,8 +66,7 @@ class Scraper
 
     # Notify via IFTTT Maker Channel
     message = "New trains for #{day} from #{origin} to #{destination}"
-    RestClient.get "https://maker.ifttt.com/trigger/notification/with/key/#{@key}",
-                    params: {value1: message}
+    RestClient.post "https://maker.ifttt.com/trigger/notification/with/key/#{@key}", value1: message
 
     return true
 
