@@ -26,4 +26,4 @@ Just run renfe_alert.rb script from a shell
 $> ./renfe_alert.rb 
 ```
 
-Ideally you want to have it running periodically in a 24/7 machine (like a server or a Raspberry Pi). Running `whenever -w` will create a cron task to execute the script every hour (to modify this behaviour see [whenever gem](https://github.com/javan/whenever)).
+Ideally you want to have it running periodically in a 24/7 machine (like a server or a Raspberry Pi). Running `whenever --update-crontab` will create a cron task to execute the script every hour (to modify this behaviour see [whenever gem](https://github.com/javan/whenever)).
